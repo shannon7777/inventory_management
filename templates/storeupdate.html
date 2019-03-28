@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2>Update Store name</h2></br>
+<h1>{{ store.name }}</h1>
+<p>Edit store name:</p>
+<form action="{{ url_for('update', id=store.id) }}" method="POST">
+    <input class="form-control" type="text" name="store_name" value="{{ store.name }}"><br>
+    <input type="submit" class='btn btn-primary'>
+</form>
+
+{% endblock %}
